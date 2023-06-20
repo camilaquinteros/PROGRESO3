@@ -1,36 +1,38 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
+
+struct persona
+{
+    int matricula;
+    char nombre[20];
+    char direccion[50];
+    char carrera[25];
+    float promedio;
+};
+
 int main(int argc, char const *argv[])
 {
-    struct persona
-    {
-        int matricula;
-        char nombre [20];
-        char direccion [50];
-        char carrera [25];
-        float promedio;
-    }; //alumno1= {1500, "Juan", "Quito", "Software", 9.2};
-    //printf("%d %s %s %s %f", alumno1.matricula, alumno1.nombre, alumno1.direccion, alumno1.carrera, alumno1.promedio);//
-    
-    struct persona alumno1;
+    struct persona alumnos[4]; // Creamos un arreglo de estructuras para almacenar 4 alumnos
 
     for (int i = 0; i < 4; i++)
     {
-         printf("Ingrese los datos del %d:\n", +1 );
-         printf("Matricula: ");
-         gets("%d", alumno1.matricula);
-         printf("Nombre: ");
-         gets("%s", alumno1.nombre);
-         printf("Direccion: ");
-         gets("%s", alumno1.direccion);
-         printf("Carrera: ");
-         gets("%s", alumno1.carrera);
-         printf("Promedio: ");
-         gets("%f", &alumno1.promedio);
-         fflush(stdin);
-    }
-    
-   
+        printf("Ingrese los datos del alumno %d:\n", i + 1);
+        printf("Matricula: ");
+        scanf("%d", &alumnos[i].matricula);
+        fflush(stdin);
 
-    return 0;
-}
+        printf("Nombre: ");
+        gets(alumnos[i].nombre);
+
+        printf("Direccion: ");
+        gets(alumnos[i].direccion);
+
+        printf("Carrera: ");
+        gets(alumnos[i].carrera);
+
+        printf("Promedio: ");
+        scanf("%f", &alumnos[i].promedio);
+        fflush(stdin);
+
+        printf("\n");
+    }
