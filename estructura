@@ -36,3 +36,22 @@ int main(int argc, char const *argv[])
 
         printf("\n");
     }
+
+// Imprimimos los datos de los alumnos
+    for (int i = 0; i < 4; i++)
+    {
+        printf("Datos del alumno %d:\n", i + 1);
+        printf("Matricula: %d\n", alumnos[i].matricula);
+        printf("Nombre: ");
+        puts(alumnos[i].nombre);
+        printf("Direccion: ");
+        puts(alumnos[i].direccion);
+        printf("Carrera: ");
+        puts(alumnos[i].carrera);
+        printf("Promedio: %.2f\n\n", alumnos[i].promedio);
+    }
+
+    return 0;
+}
+
+
