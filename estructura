@@ -12,23 +12,22 @@ int main(int argc, char const *argv[])
     }; //alumno1= {1500, "Juan", "Quito", "Software", 9.2};
     //printf("%d %s %s %s %f", alumno1.matricula, alumno1.nombre, alumno1.direccion, alumno1.carrera, alumno1.promedio);//
     
-   struct persona alumno1;
+    struct persona alumno1;
 
     for (int i = 0; i < 4; i++)
     {
          printf("Ingrese los datos del %d:\n", +1 );
-    printf("Matricula: ");
-    scanf("%d", alumno1.matricula);
-    printf("Nombre: ");
-    scanf("%s", alumno1.nombre);
-    printf("Direccion: ");
-    scanf("%s", alumno1.direccion);
-    printf("Carrera: ");
-    scanf("%s", alumno1.carrera);
-    printf("Promedio: ");
-    scanf("%f", &alumno1.promedio);
-    fflush(stdin);
-
+         printf("Matricula: ");
+         gets("%d", alumno1.matricula);
+         printf("Nombre: ");
+         gets("%s", alumno1.nombre);
+         printf("Direccion: ");
+         gets("%s", alumno1.direccion);
+         printf("Carrera: ");
+         gets("%s", alumno1.carrera);
+         printf("Promedio: ");
+         gets("%f", &alumno1.promedio);
+         fflush(stdin);
     }
     
    
