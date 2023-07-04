@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+#define NUM_CARRERAS 7
+#define NUM_ANIOS 5
+
+int main() {
+    int datosAlumnos[NUM_ANIOS][NUM_CARRERAS];
+    int totalAlumnosAnio[NUM_ANIOS] = {0};
+    int totalAlumnosCarrera[NUM_CARRERAS] = {0};
